@@ -1,11 +1,16 @@
 import { Component } from '@stencil/core';
-
+import { Plugins } from '@capacitor/core'
+const { SplashScreen } = Plugins
 
 @Component({
   tag: 'my-app',
   styleUrl: 'my-app.css'
 })
 export class MyApp {
+
+  componentDidLoad() {
+    SplashScreen.hide();
+  }
 
   render() {
     return (
